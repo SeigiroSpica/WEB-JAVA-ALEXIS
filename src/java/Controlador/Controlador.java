@@ -35,7 +35,7 @@ public class Controlador extends HttpServlet {
         if(email.equals(emailDefault)&&password.equals(PasswordDefault)){
             response.sendRedirect("PantallaPrincipal.jsp?email="+email+"&numero=3&intento=7");
         } else {
-            response.sendRedirect("PantallaError.jsp");
+            
         }
         
     }
