@@ -15,14 +15,16 @@
         <title>Cena Allá</title>
     </head>
     <body>
-
+        <script>$('.alert').alert()</script>
         <div class="container">
             <div class="row justify-content-center align-content-center">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12" style=" ; margin: 150px auto;">
-                    <% 
-                    %>
-                    
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12" style=" ; margin: 150px auto;">                    
                     <form class="login-form" action="Controlador" method="post">
+                       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span></button>
+                        <p style="text-align: center">El correo electronico y/o la contraseña ingresada es incorrecto.<br> Por favor vuelva a intentarlo.</p>
+                    </div>
                         <div class="form-group">
                             <h2>Inicia Sesion</h2>
                         </div>
@@ -38,17 +40,6 @@
                             <a href="#" class="text-info float-right">Olvidé la contraseña.</a>
                         </div>
                         <button type="submit" class="btn btn-outline-info btn-block">Iniciar Sesion</button>
-                        <%
-                        if (!request.getParameter("email").equals(null)&&!request.getParameter("password").equals(null)&&!request.getParameter("email").equals("alexis@javaweb.com")&&!request.getParameter("password").equals("javaweb")){
-                            
-                        
-                    %>
-                    <div class="alert-danger alert-dismissible rounded fade show">
-                        <button type="button" class="close" data-dismiss="alert">>&times;</button>
-                        <p style="text-align: center">El correo electronico y/o la contraseña ingresada es incorrecto.<br> Por favor vuelva a intentarlo.</p>
-                    </div>
-                    <% }
-                    %>
                     </form>
                 </div>
             </div>
